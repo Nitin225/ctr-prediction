@@ -1,0 +1,11 @@
+numpy
+pandas
+scipy
+scikit-learn
+xgboost
+torch
+shap
+matplotlib
+pyyaml
+huggingface_hub
+pytest

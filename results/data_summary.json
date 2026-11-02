@@ -1,0 +1,25 @@
+{
+  "train_rows": 1000000,
+  "valid_rows": 250000,
+  "click_rate_train": 0.251885,
+  "click_rate_valid": 0.250852,
+  "top_missing_pct": {
+    "I12": 76.9,
+    "C22": 76.1,
+    "I1": 44.3,
+    "I10": 44.3,
+    "C26": 44.0,
+    "C19": 44.0,
+    "C20": 44.0,
+    "C25": 44.0
+  },
+  "raw_unique_categories_total": 1449732,
+  "unique_categories_after_cleaning_total": 72944,
+  "highest_cardinality_raw": {
+    "C3": 348299,
+    "C12": 307104,
+    "C21": 277456,
+    "C16": 237016,
+    "C4": 135225
+  }
+}

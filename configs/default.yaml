@@ -1,0 +1,32 @@
+seed: 42
+
+data:
+  n_train: 1000000      # rows read from train.csv (Criteo_x4)
+  n_valid: 250000       # rows read from valid.csv (never used for fitting or model selection)
+  min_count: 10         # categories seen fewer times in TRAIN are mapped to "other"
+
+models:
+  logreg:
+    C: 0.1
+    max_iter: 300
+  xgb:
+    n_estimators: 300
+    max_depth: 8
+    learning_rate: 0.1
+    subsample: 0.8
+    colsample_bytree: 0.8
+  deepfm:
+    emb_dim: 16
+    hidden: [256, 128]
+    dropout: 0.2
+    lr: 0.001
+    batch_size: 4096
+    epochs: 6
+    patience: 1         # stop when the held-out-from-train loss stops improving
+    holdout_frac: 0.1   # part of TRAIN used only for epoch selection
+
+ablation:
+  train_sizes: [100000, 250000, 500000, 1000000]
+
+paths:
+  results_dir: results
